@@ -11,13 +11,11 @@ public partial class ProduseResigilate : ContentPage
 	{
 		var slist = (ProduseFavorite)BindingContext;
 		slist.Date = DateTime.UtcNow;
-		await App.Database.SaveProduseFavoriteAsync(slist);
 		await Navigation.PopAsync();
 	}
 	async void OnDeleteButtonClicked(object sender, EventArgs e)
 	{
 		var slist = (ProduseFavorite)BindingContext;
-		await App.Database.DeleteProduseFavoriteAsync(slist);
 		await Navigation.PopAsync();
 	}
 

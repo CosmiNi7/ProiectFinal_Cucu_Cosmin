@@ -11,7 +11,6 @@ public partial class OfertaZilei : ContentPage
 	protected override async void OnAppearing()
 	{
 		base.OnAppearing();
-		listView.ItemsSource = await App.Database.GetProduseFavoriteAsync();
 	}
 	async void OnShopListAddedClicked(object sender, EventArgs e)
 	{
