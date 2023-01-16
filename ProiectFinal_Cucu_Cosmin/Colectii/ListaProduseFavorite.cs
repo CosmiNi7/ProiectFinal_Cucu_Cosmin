@@ -69,7 +69,7 @@ namespace ProiectFinal_Cucu_Cosmin.Colectii
 		}
 		public Task<int> SaveListProductAsync(MarcaProdus listp)
 		{
-			if (listp.ID != 0)
+			if (listp.ID!= 0)
 			{
 				return _database.UpdateAsync(listp);
 			}

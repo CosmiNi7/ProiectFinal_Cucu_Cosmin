@@ -58,9 +58,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="NewPage1.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="OfertaZilei.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

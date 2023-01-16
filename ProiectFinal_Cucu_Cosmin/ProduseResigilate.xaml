@@ -6,7 +6,7 @@
     <StackLayout Margin="20">
         <Editor Placeholder="Enter the description of the shopping list"
  Text="{Binding Description}"
- HeightRequest="100" />
+ HeightRequest="50" />
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -18,5 +18,25 @@
  Text="Stergere"
  Clicked="OnDeleteButtonClicked"/>
         </Grid>
-    </StackLayout>
-</ContentPage>
+        <ListView x:Name="listView"
+ Margin="20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Detail="{Binding Description}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <Button Text="Add/Choose Item to buy" MaximumWidthRequest="300"
+Clicked="OnChooseButtonClicked"/>
+        <ContentPage 
+            xmlns:local="clr-namespace:ProiectFinal_Cucu_Cosmin">
+            <StackLayout Margin="20">
+                <Editor Placeholder="Enter the description of the shopping list"
+ Text="{Binding Description}"
+ HeightRequest="50" >
+                    <Editor.Behaviors>
+                        <local:ValidationBehaviour />
+                    </Editor.Behaviors>
+                </Editor>
+            </StackLayout></ContentPage>
